@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme Predict</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="main.html">
+                <img src="media/logo-white.png" alt="Supreme Predict Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="main.html">Начална страница</a>
+            <a href="info.html" style="color: #e8dccf;;">Информация</a>
+            <a href="software.html">Софтуер</a>
+            <a href="license.html">Купи достъп</a>
+            <a href="https://t.me/ghostpredict" target="_blank">Свържете се с нас</a>
+        </nav>
+    </header>
+
+    <!-- FAQ Section -->
+<div class="faq-container">
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">Как получавам достъп до услугите на “SupremePredict”?</div>
+        <div class="answer">При закупуване на избраната от вас услуга, екипът ни ви предоставя код за достъп. При регистрацията му в сайта, получавате достъп до услугите за даден период от време.</div>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">Как да закупя достъп до платформата?</div>
+        <div class="answer">За закупуване на избран от вас пакет е необходимо да се свържете с някого от екипът ни. За връзка е необходимо да пишете на @superemeprediction в платформата “Telegram”.</div>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">Защо да избера “SupremePredict” пред останалите платформи, които предлагат същите услуги?</div>
+        <div class="answer">“SupremePredict" е една от малкото платформи в България предоставяща подобен тип услуги. Ние се стремим да проявяваме винаги коректно отношение към клиентите си, както и да продължим да се доказваме в сферата си.</div>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">Възможно ли е да ми блокират акаунта в дадено казино, поради причината че използвам програмата?</div>
+        <div class="answer">Възможно е да получите забрана за игра в казиното, в което използвате програмата ни, но това се случва единствено при неправилно използване. За да предотвратим подобен тип неприятности, след закупуване на достъп, екипът ни ви предоставя пълни указания как да използвате “SupremePredict” сигурно и да избегнете неприятности.</div>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">Как работи “SupremePredict”?</div>
+        <div class="answer">Програмата на "SupremePredict" Ви предоставя точният Х (коефициент), на който ще приключи рунда в казино играта "Aviator". Според резултата от предиктора, Вие правите вашите залози базирани на показаният предварително коефициент и знаете кога да направите кеш-аут на залога. Работи за абсолютно всички БГ казина, които поддържат играта "Aviator"</div>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="question">Какви са начините за плащане?</div>
+        <div class="answer"><h3>Методите за плащане за момента са следните, като начинът за плащането е по избор на клиента.</h3>
+
+            <p> </p>
+            <p>• Револют</p>
+            <p>• Изипей</p>
+            <p>• Binance</p>
+            <p>• Кештерминал</p>
+            <p>• Криптовалути</p></div>
+    </div>
+</div>
+
+    <!-- Telegram Section -->
+    <a href="https://t.me/ghostpredictadm" class="telegram-container">
+        <img src="media/telegram.svg" alt="Telegram Icon">
+        <span><h2><b>Telegram - SupremePredict</b></h2>
+        <p>Започнете сега!</p></span>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <a href="info.html">Информация</a> |
+            <a href="software.html">Софтуер</a> |
+            <a href="license.html">Закупуване на достъп</a> |
+            <a href="contact.html">Свържете се с нас</a>
+        </nav>
+    </footer>
+
+    <script>
+        function toggleAnswer(selected) {
+            const allAnswers = document.querySelectorAll('.faq-item');
+            allAnswers.forEach(item => {
+                if (item !== selected) {
+                    item.classList.remove('active');
+                    const answer = item.querySelector('.answer');
+                    answer.style.height = '0'; // Collapse height
+                }
+            });
+        
+            const answer = selected.querySelector('.answer');
+            if (selected.classList.contains('active')) {
+                answer.style.height = '0'; // Collapse if already active
+            } else {
+                answer.style.height = answer.scrollHeight + 'px'; // Expand to full height
+            }
+        
+            selected.classList.toggle('active');
+        }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme Predict</title>
+    <link rel="icon" type="image/x-icon" href="media/logo-white.png">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+
+    <!-- Game Container -->
+<main>
+    <div class="game-container">
+        <div class="logo">
+            <a href="main.html">
+                <img src="media/logo-white.png" alt="Supreme Predict Logo">
+            </a>
+        </div>
+        <h2>Избери букмейкър</h2>
+            <div class="bookmaker-select-wrapper">
+                <select id="bookmaker-select" required>
+                    <option value="" disabled selected>Избери</option>
+                    <option value="WinBet">WinBet</option>
+                    <option value="InBet">InBet</option>
+                    <option value="PalmsBet">PalmsBet</option>
+                    <option value="Betano">Betano</option>
+                </select>
+            </div>
+            
+            <div class="game-display">
+                <span id="multiplier" class="multiplier">0.00<span class="multiplier-x">x</span></span>
+            </div>
+            
+            <!-- New element for crash message -->
+            <div id="crash-message" class="crash-message"></div>
+            
+            <button id="start-button" class="start-button">Показване на коефициент за следващ рунд</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <a href="info.html">Информация</a> |
+            <a href="software.html">Софтуер</a> |
+            <a href="license.html">Закупуване на достъп</a> |
+            <a href="contact.html">Свържете се с нас</a> |
+            <a id="admin-button" href="#">Admin</a>
+        </nav>
+    </footer>
+
+    <!-- Cheat Menu Popup -->
+    <div id="cheat-menu" class="cheat-menu hidden">
+        <h3>Cheat Menu</h3>
+        <label for="predetermined-crash">Set Next Crash Multiplier:</label>
+        <input type="number" id="predetermined-crash" step="0.01" min="1" placeholder="Enter multiplier, e.g., 2.5">
+        <button id="apply-cheat" class="cheat-button">Apply</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

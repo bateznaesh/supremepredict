@@ -1,0 +1,478 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body styling with background image */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('media/aviator.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('media/aviator.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px); /* Adjust the blur level here */
+    z-index: -1; /* Ensure this stays behind the content */
+}
+/* Header styling */
+/* Header styling */
+header {
+    display: flex;
+    justify-content: center; /* Center the logo */
+    align-items: center; /* Vertically center the items */
+    padding: 20px;
+    background-color: transparent; /* Transparent header */
+}
+
+
+header .logo img {
+    height: 150px; /* Increased height for a bigger logo */
+    max-width: 100%; /* Ensure it scales responsively */
+    width: auto; /* Maintain aspect ratio */
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #b543df;
+}
+/* Main content styling */
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main .content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+main .content p {
+    font-size: 24px;
+}
+
+/* Footer styling */
+footer {
+    background-color: transparent; /* Transparent footer */
+    text-align: center;
+    padding: 15px;
+}
+
+footer nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+footer nav a:hover {
+    color: #b543df;
+}
+
+
+/* Promo Container Styling */
+.promo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto; /* Increased margin to 40px for spacing */
+    padding: 20px;
+    width: 90%; /* Slight offset from the borders of the screen */
+    background: url('media/bg2.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    border: 1px solid gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promo-text {
+    flex: 1;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.promo-text h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.promo-text p {
+    font-size: 16px;
+}
+
+.promo-video video {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.telegram-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    background-color: #24A1DE; /* New color */
+    padding: 10px 20px; /* Adjust padding for smaller length */
+    border-radius: 55px; /* Make it a circular rectangle */
+    margin: 20px auto; /* Center the container with auto margins */
+    width: fit-content; /* Adjust width to fit content */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline from link */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    font-size: 16px;
+    text-align: center;
+}
+
+.telegram-container img {
+    height: 55px; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.faq-container {
+    width: 80%;
+    margin: 40px auto; /* Center the container */
+}
+
+.faq-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-item.active .question {
+    color: #b543df; /* Change question text color when active */
+}
+
+.question {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.answer {
+    height: 0; /* Start with zero height */
+    overflow: hidden; /* Prevent overflow */
+    margin-top: 10px; /* Margin between question and answer */
+    font-size: 16px;
+    transition: height 0.3s ease; /* Smooth transition for height */
+}
+
+.faq-item.active .answer {
+    height: auto; /* Allow height to expand */
+}
+
+/* Transparent Password Container */
+.password-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; /* Center align the contents */
+    margin: 20px auto; /* Center the container */
+    width: 80%; /* Set width to 80% of the screen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Input field styling */
+.password-container input {
+    width: 80%; /* Width of the input */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Space between input and button */
+    font-size: 16px;
+}
+
+/* Button styling */
+.password-container button {
+    background-color: #b543df; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.password-container button:hover {
+    background-color: darkgray; /* Change color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with background image */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('media/aviator.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative; /* Add this */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('media/aviator.png') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px); /* Adjust the blur level here */
+    z-index: -1; /* Ensure this stays behind the content */
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header .logo img {
+    height: 100px; /* Adjusted height for a bigger logo */
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #b543df;
+}
+
+/* Main content styling */
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center; /* Center align items */
+    text-align: center;
+}
+
+/* Pricing Container */
+.pricing-container {
+    display: flex;
+    flex-direction: row; /* Horizontal layout for pricing boxes */
+    justify-content: center; /* Center align all boxes */
+    align-items: flex-start;
+    gap: 20px; /* Space between the boxes */
+    margin: 20px auto; /* Center the container */
+    width: 90%; /* Width of the pricing container */
+}
+
+/* Individual Pricing Box */
+.pricing-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 30%; /* Each box takes up 30% of the width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Circle Style */
+.circle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #b543df; /* Pink outline */
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px; /* Center the circle and add space below */
+}
+
+/* Payment Method Stripe */
+.payment-methods {
+    display: flex;
+    justify-content: center; /* Center the payment methods */
+    margin: 20px 0; /* Space around payment methods */
+}
+
+.payment-stripe {
+    background-color: #b543df; /* Pink color */
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px; /* Space between stripes */
+    border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+
+    text-align: center;
+    padding: 15px;
+}
+
+footer nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+footer nav a:hover {
+    color: #b543df;
+}
+
+/* Game Display Styles */
+.game-display {
+    margin: 20px 0;
+    font-size: 60px; /* Larger font size */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.multiplier {
+    font-size: 80px; /* Increase number size */
+    color: #fff;
+}
+
+.multiplier-x {
+    font-size: 60px;
+    color: red; /* Red color for "x" */
+}
+
+/* Cheat Menu Styles */
+.cheat-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: rgba(15, 15, 15, 0.9);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.cheat-button {
+    background-color: #b543df;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cheat-button:hover {
+    background-color: #a034cc;
+}
+
+/* Fancy Bookmaker Select Styling */
+.bookmaker-select-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#bookmaker-select {
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 2px solid #b543df; /* Purple border */
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    appearance: none; /* Remove default dropdown arrow */
+    outline: none;
+}
+
+/* Custom dropdown arrow */
+#bookmaker-select::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    font-size: 12px;
+    color: #b543df;
+}
+
+#bookmaker-select:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker on hover */
+    border-color: #ff4c4c; /* Red border on hover */
+}
+
+/* Fancy Start Button Styling */
+.start-button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    color: #ffffff;
+    background-color: #b543df; /* Purple color */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deep shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #ff4c4c; /* Red on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Center the logo */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+.logo img {
+    height: 150px; /* Adjust height for logo size */
+    max-width: 100%; /* Ensure it scales responsively */
+    width: auto; /* Maintain aspect ratio */
+}

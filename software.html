@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme Predict</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript function to validate the password
+        function validatePassword() {
+            const correctPassword = "SUPREME777";
+            const userInput = document.getElementById("license-input").value;
+
+            if (userInput === correctPassword) {
+                // Redirect to the new page
+                window.location.href = "supremepredictsoftware.html";
+            } else {
+                // Show an alert for incorrect password
+                alert("Неправилен ключ за достъп");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="main.html">
+                <img src="media/logo-white.png" alt="Supreme Predict Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="main.html">Начална страница</a>
+            <a href="info.html">Информация</a>
+            <a href="software.html" style="color: #e8dccf;;">Софтуер</a>
+            <a href="license.html">Купи достъп</a>
+            <a href="https://t.me/ghostpredict" target="_blank">Свържете се с нас</a>
+        </nav>
+    </header>
+
+    <!-- Transparent Password Input Container -->
+    <div class="logo">
+        <a href="main.html">
+            <img src="media/blank.png" alt="Supreme Predict Logo">
+        </a>
+    </div>
+    <div class="password-container">
+        <input type="password" placeholder="Въведете лиценз за достъп" id="license-input">
+        <button id="activate-button" onclick="validatePassword()">Активирайте лиценз за достъп</button>
+    </div>
+    <div class="logo">
+        <a href="main.html">
+            <img src="media/blank.png" alt="Supreme Predict Logo">
+        </a>
+    </div>
+    <!-- Telegram Section -->
+    <a href="https://t.me/ghostpredictadm" class="telegram-container">
+        <img src="media/telegram.svg" alt="Telegram Icon">
+        <span><h2><b>Telegram - SupremePredict</b></h2>
+        <p>Започнете сега!</p></span>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <a href="info.html">Информация</a> |
+            <a href="software.html">Софтуер</a> |
+            <a href="license.html">Закупуване на достъп</a> |
+            <a href="contact.html">Свържете се с нас</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
